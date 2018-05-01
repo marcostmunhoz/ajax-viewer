@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Visualizador de AJAX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="public/css/main.css" />
+  </head>
+  <body>
+    <div id="outer-wrapper">
+      <header>Visualizador de AJAX</header>
+      <div id="inner-wrapper">
+        <div class="line">
+          <label for="endpoint">Endereço</label>
+          <input type="url" id="endpoint">
+        </div>
+        <div class="line">
+          <label for="request-type">Tipo</label>
+          <select id="request-type">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="DELETE">DELETE</option>
+          </select>
+        </div>
+        <div class="line">
+          <label>Dados da requisição</label>
+        </div>
+        <div class="line">
+          <table id="request-data">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Valor</th>
+                <th>Opções</th>
+              </tr>
+            </thead><tbody>
+            </tbody>
+          </table>
+        </div>
+        <div class="line">
+          <button type="button" id="add-data">Adicionar</button>
+        </div>
+        <div class="line">
+          <button src="button" id="send">Enviar requisição</button>
+        </div>
+      </div>
+      <div id="output-container">
+        <span class="placeholder">
+          Clique em <b>enviar requisição</b> para exibir os dados.
+        </span>
+        <span class="loading">
+          <span class="spinner"></span>&nbsp;Carregando...
+        </span>
+        <pre class="output"></pre>
+      </div>
+    </div>
+    <script src="public/js/main.js"></script>
+  </body>
+</html>
